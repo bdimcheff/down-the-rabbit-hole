@@ -38,20 +38,34 @@
 			<div class="slides">
         <section>
           <h1>Down the Rabbit Hole:</h1>
-          <h3>a story about a bug</h3>
+          <h3>a story about chasing a bug</h3>
+        </section>
+
+        <section>
+          <h2>a talk in six acts</h2>
         </section>
 
         <section>
           <h2>Cast</h2>
-          <ul>
-            <li class="fragment">node.js</li>
-            <li class="fragment">backbone</li>
-            <li class="fragment">socket.io</li>
-          </ul>
         </section>
 
         <section>
-          <h1>Act One: Denial</h1>
+          <p>my bio</p>
+        </section>
+
+        <section>
+          <p>opconsole screenshot</p>
+          <aside class="notes">
+            socketio, nodejs, xmpp client
+          </aside>
+        </section>
+
+        <section>
+          <p>olark advice bird</p>
+        </section>
+
+        <section>
+          <h1>Act I: Denial</h1>
           <blockquote>
             <strong>The chat client keeps disconnecting and reconnecting!</strong> - a customer
           </blockquote>
@@ -105,11 +119,17 @@
         <section>
           <h1>Problem Solved!</h1>
           <p class="fragment">Get better internet.</p>
+          <p class="fragment">Talk over.</p>
           <p class="fragment"><small>... not so fast ...</small></p>
         </section>
 
         <section>
-          <h1>Act Two: ??</h1>
+          <h1>Lesson #1: Listen to your users</h1>
+          <p>maybe olark advice bird?</p>
+        </section>
+
+        <section>
+          <h1>Act II: Acceptance</h1>
         </section>
 
         <section>
@@ -117,7 +137,7 @@
         </section>
 
         <section>
-          <h1>Tool #1</h1>
+          <h1>Lesson #1</h1>
           <h2>Logs</h2>
         </section>
 
@@ -136,46 +156,168 @@
         </section>
 
         <section>
-          <section>
-            <h3>It's a UNIX system!  I know this!</h3>
-            <p style="margin-top: 5em"><code>cat default.log | grep "#op_disconnect" |
-              <br />json -g -a username | sort | 
-              <br />uniq -c | sort -b -n</code></p>
-              
-          </section>
-          <section>
-            <h3><code>$ npm install jsontool</code></h3>
-          </section>
-          <section>
-            <pre><code contenteditable style="font-size: 72px;
-            line-height: 1.25em">  1 steve 
-  2 john 
-512 suzie</code></pre>
-            
-          </section>
+          <h1>Lesson #2</h1>
+          <h2>Graphs</h2>
         </section>
 
         <section>
-          <section>
-            <h1>woah there, suzie</h1>
-          </section>
-          <section>
-            <code>cat default.log|grep "#op_disconnect" | json -g -a timestamp username | grep "suzie" | cut -d' ' -f 1</code>
-            <pre class="fragment"><code contenteditable
-            style="font-size: 36px;
-            line-height: 1.25em">...
+          <p>graph of disconnects</p>
+          <p>graph of current connections</p>
+        </section>
+
+        <section>
+          <h3>10% of users disconnect <em class="fragment">every minute</em></h3>
+        </section>
+
+        <section>
+          <h3>to the logs!</h3>
+        </section>
+
+        <section>
+          <h3>It's a UNIX system!  I know this!</h3>
+          <p style="margin-top: 5em"><code>cat default.log | grep "#op_disconnect" |
+            <br />json -g -a username | sort | 
+            <br />uniq -c | sort -b -n</code></p>
+        </section>
+        <section>
+          <h3><code>$ npm install jsontool</code></h3>
+        </section>
+        <section>
+          <pre><code contenteditable style="font-size: 72px;
+          line-height: 1.25em">  1 steve 
+  2 john 
+512 suzie</code></pre>
+        </section>
+
+        <section>
+          <h1>woah there, suzie</h1>
+        </section>
+        <section>
+          <code>cat default.log|grep "#op_disconnect" | json -g -a timestamp username | grep "suzie" | cut -d' ' -f 1</code>
+          <pre class="fragment"><code contenteditable
+          style="font-size: 36px;
+          line-height: 1.25em">...
 2013-03-07T16:45:46.067Z
 2013-03-07T16:46:46.145Z
 2013-03-07T16:47:46.238Z
 2013-03-07T16:48:46.407Z
 ...</code></pre>
-            <p class="fragment"><small>every minute?</small></p>
+          <p class="fragment"><small>every minute?</small></p>
 
-          </section>
         </section>
 
         <section>
-          <h1>Act ??: Life Lessons</h1>
+          <h1>Lesson #?: Know your tools</h1>
+        </section>
+
+        <section>
+          <h1>Act III: Repro</h1>
+        </section>
+
+        <section>
+          <h1>Flaky Internet</h1>
+          <p>how can we simulate this?</p>
+        </section>
+
+        <section>
+          <h2><code>iptables --help</code></h2>
+        </section>
+
+        <section>
+          <h2><code>man iptables</code></h2>
+        </section>
+
+        <section>
+          <h2><em>30 minutes later...</em></h2>
+        </section>
+
+        <section>
+          <h3>screw it</h3>
+          <p class="fragment">/me unplugs ethernet cable</p>
+        </section>
+
+        <section>
+          <h1>Flaky Internet!</h1>
+        </section>
+
+        <section>
+          <h1>Repro Success!</h1>
+          <p class="fragment">2 months after first report</p>
+          <p class="fragment">/me does happy dance</p>
+        </section>
+
+        <section>
+          <h1>Lesson: Do the stupidest, easiest thing that <em>works</em></h1>
+        </section>
+
+        <section>
+          <h2 style="margin-bottom:1em">repro:</h2>
+          <ol>
+            <li>unplug ethernet</li>
+            <li>wait until it disconnects</li>
+            <li>plug ethernet back in</li>
+          </ol>
+        </section>
+
+        <section>
+          <h1>Act IV: Diagnosis</h1>
+        </section>
+
+        <section>
+          <img src="/websockets-debug.png" alt="" />
+          <p>no close :(</p>
+        </section>
+
+        <section>
+          <p>wireshark screenshot</p>
+        </section>
+
+        <section>
+          <p>closed by the <strong>client</strong></p>
+        </section>
+
+        <section>
+          <h1>Shotgun Debugging</h1>
+          <p>I stuck breakpoints <em>everywhere</em> that said <code>close</code></p>
+        </section>
+
+        <section>
+          <ol>
+            <li>Heartbeat calls transport.onClose</li>
+            <li>transport.onClose calls socket.onDisconnect and thus socket.reconnect</li>
+            <li>socket.reconnect swaps out the old transport for a new one</li>
+            <li>socket.onDisconnect also calls transport.close and thus websocket.close</li>
+            <li>websocket.close puts the websocket into the CLOSING state</li>
+            <li>new transport/websocket successfully establishes a connection</li>
+            <li>old websocket (after some time) goes from CLOSING to CLOSED and fires its onclose handler which calls transport.onClose on the OLD transport</li>
+            <li>old transport still has a reference to the current socket, so it calls socket.onDisconnect, which closes the *new* socket</li>
+            <li>loop back and do it all again</li>
+          </ol>
+        </section>
+
+        <section>
+          <h1>Act V: The Fix</h1>
+        </section>
+
+        <section>
+          <pre><code class="diff" style="font-size: 100%; line-height: 1.2em">-    this.isOpen = false;
+-    this.socket.onClose();
+-    this.onDisconnect();
++    /* only call close if transport hasn't been swapped out already */
++    if (this.socket.transport === this) {
++      this.isOpen = false;
++      this.socket.onClose();
++      this.onDisconnect();
++    }</code></pre>
+          <p><strong>NOTE:</strong> This is probably terrible.</p>
+        </section>
+
+        <section>
+          <p>graph of #op_disconnect before/after deploy</p>
+        </section>
+
+        <section>
+          <h1>Act VI: Life Lessons</h1>
         </section>
 
         <section>
@@ -188,6 +330,10 @@
 
         <section>
           <h3>Know thine tools</h3>
+        </section>
+
+        <section>
+          <h3>Do the stupid, easy thing</h3>
         </section>
 
         <section>
