@@ -15,7 +15,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 		<link rel="stylesheet" href="css/reveal.min.css">
-		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+		<link rel="stylesheet" href="css/theme/simple.css" id="theme">
 
 		<!-- For syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -36,6 +36,164 @@
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
+        <section>
+          <h1>Down the Rabbit Hole:</h1>
+          <h3>a story about a bug</h3>
+        </section>
+
+        <section>
+          <h2>Cast</h2>
+          <ul>
+            <li class="fragment">node.js</li>
+            <li class="fragment">backbone</li>
+            <li class="fragment">socket.io</li>
+          </ul>
+        </section>
+
+        <section>
+          <h1>Act One: Denial</h1>
+          <blockquote>
+            <strong>The chat client keeps disconnecting and reconnecting!</strong> - a customer
+          </blockquote>
+        </section>
+
+        <section>
+          <h1>PEBKAC</h1>
+        </section>
+
+        <section>
+          <h1>TODO define pebkac</h1>
+        </section>
+
+        <section>
+          <blockquote>
+            <strong>The chat client keeps disconnecting and
+              reconnecting!</strong> - another customer
+          </blockquote>
+        </section>
+
+        <section>
+          <!--TODO: auto-in the ?-->
+          <h1>PEBKAC<span class="fragment">?</span></h1>
+        </section>
+
+        <section>
+          <h1>Flaky Internet?</h1>
+        </section>
+
+        <section>
+          <blockquote>
+            <strong>The chat client keeps disconnecting and
+              reconnecting!</strong> - my coworker
+          </blockquote>
+        </section>
+
+        <section>
+          <h1>PEBKAC!</h1>
+          <p class="fragment"><small>j/k, Sunir</small></p>
+        </section>
+
+        <section>
+          <p><strong>Sunir:</strong> My internet is flaky</p>
+        </section>
+
+        <section>
+          <h1>Flaky Internet!</h1>
+          <p class="fragment"><small>I <strong>thought</strong> so...</small></p>
+        </section>
+
+        <section>
+          <h1>Problem Solved!</h1>
+          <p class="fragment">Get better internet.</p>
+          <p class="fragment"><small>... not so fast ...</small></p>
+        </section>
+
+        <section>
+          <h1>Act Two: ??</h1>
+        </section>
+
+        <section>
+          <h1>How often?</h1>
+        </section>
+
+        <section>
+          <h1>Tool #1</h1>
+          <h2>Logs</h2>
+        </section>
+
+        <section>
+          <p>Logs, <span class="fragment">logs</span><span
+            class="fragment"> they're big</span><span class="fragment"> they're
+          helpful</span><span class="fragment"> they're text</span></p>
+        </section>
+
+        <section>
+          <p>and ours are json and have <strong>#hashtags</strong></p>
+        </section>
+
+        <section>
+          <h3><code>#op_disconnected</code></h3>
+        </section>
+
+        <section>
+          <section>
+            <h3>It's a UNIX system!  I know this!</h3>
+            <p style="margin-top: 5em"><code>cat default.log | grep "#op_disconnect" |
+              <br />json -g -a username | sort | 
+              <br />uniq -c | sort -b -n</code></p>
+              
+          </section>
+          <section>
+            <h3><code>$ npm install jsontool</code></h3>
+          </section>
+          <section>
+            <pre><code contenteditable style="font-size: 72px;
+            line-height: 1.25em">  1 steve 
+  2 john 
+512 suzie</code></pre>
+            
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h1>woah there, suzie</h1>
+          </section>
+          <section>
+            <code>cat default.log|grep "#op_disconnect" | json -g -a timestamp username | grep "suzie" | cut -d' ' -f 1</code>
+            <pre class="fragment"><code contenteditable
+            style="font-size: 36px;
+            line-height: 1.25em">...
+2013-03-07T16:45:46.067Z
+2013-03-07T16:46:46.145Z
+2013-03-07T16:47:46.238Z
+2013-03-07T16:48:46.407Z
+...</code></pre>
+            <p class="fragment"><small>every minute?</small></p>
+
+          </section>
+        </section>
+
+        <section>
+          <h1>Act ??: Life Lessons</h1>
+        </section>
+
+        <section>
+          <h3>Log ALL THE THINGS</h3>
+        </section>
+
+        <section>
+          <h3>Graph ALL THE THINGS</h3>
+        </section>
+
+        <section>
+          <h3>Know thine tools</h3>
+        </section>
+
+        <section>
+          <h3>Pay attention to your users <span class="fragment">and
+              sometimes even your coworkers</span></h3>
+        </section>
 
 				<section>
 					<h1>Reveal.js</h1>
