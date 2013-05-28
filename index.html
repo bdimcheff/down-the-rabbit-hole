@@ -15,7 +15,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 		<link rel="stylesheet" href="css/reveal.min.css">
-		<link rel="stylesheet" href="css/theme/simple.css" id="theme">
+		<link rel="stylesheet" href="css/theme/solarized.css" id="theme">
 
 		<!-- For syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -42,7 +42,7 @@
         </section>
 
         <section>
-          <h2>Cast</h2>
+          <h1>Cast</h1>
           <ul>
             <li class="fragment">node.js</li>
             <li class="fragment">backbone</li>
@@ -52,6 +52,7 @@
 
         <section>
           <h1>Act One: Denial</h1>
+          <br />
           <blockquote>
             <strong>The chat client keeps disconnecting and reconnecting!</strong> - a customer
           </blockquote>
@@ -90,7 +91,7 @@
 
         <section>
           <h1>PEBKAC!</h1>
-          <p class="fragment"><small>j/k, Sunir</small></p>
+          <p class="fragment">j/k, Sunir</p>
         </section>
 
         <section>
@@ -99,7 +100,7 @@
 
         <section>
           <h1>Flaky Internet!</h1>
-          <p class="fragment"><small>I <strong>thought</strong> so...</small></p>
+          <p class="fragment">I <strong>thought</strong> so...</p>
         </section>
 
         <section>
@@ -139,19 +140,19 @@
           <section>
             <h3>It's a UNIX system!  I know this!</h3>
             <p style="margin-top: 5em"><code>cat default.log | grep "#op_disconnect" |
-              <br />json -g -a username | sort | 
+              <br />json -g -a username | sort |
               <br />uniq -c | sort -b -n</code></p>
-              
+
           </section>
           <section>
             <h3><code>$ npm install jsontool</code></h3>
           </section>
           <section>
             <pre><code contenteditable style="font-size: 72px;
-            line-height: 1.25em">  1 steve 
-  2 john 
+            line-height: 1.25em">  1 steve
+  2 john
 512 suzie</code></pre>
-            
+
           </section>
         </section>
 
@@ -204,7 +205,7 @@
 				</section>
 
 				<section>
-					<h2>Heads Up</h2>
+					<h1>Heads Up</h1>
 					<p>
 						reveal.js is a framework for easily creating beautiful presentations using HTML. You'll need a browser with
 						support for CSS 3D transforms to see it in its full glory.
@@ -333,6 +334,7 @@
 						<a href="?theme=night#/themes">Night</a> -
 						<a href="?#/themes">Default</a>
 					</p>
+                    <br />
 					<p>
 						<small>
 							* Theme demos are loaded after the presentation which leads to flicker. In production you should load your theme in the <code>&lt;head&gt;</code> using a <code>&lt;link&gt;</code>.
@@ -341,7 +343,7 @@
 				</section>
 
 				<section>
-					<section data-state="alert">
+					<section data-state="soothe">
 						<h2>Global State</h2>
 						<p>
 							Set <code>data-state="something"</code> on a slide and <code>"something"</code>
@@ -384,6 +386,7 @@ Reveal.addEventListener( 'customevent', function() {
 						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
 						&ldquo;The nice thing about standards is that there are so many to choose from&rdquo;</q> and block:
 					</p>
+                    <br />
 					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
 						&ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
 						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
