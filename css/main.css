@@ -7,3 +7,9 @@
 .shadowed {
   border: 10px solid rgba(255, 255, 255, 0.5) !important;
 }
+
+.advice-bird {
+  position: absolute;
+  right: 50px;
+  bottom: -220px;
+}
