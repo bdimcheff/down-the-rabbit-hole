@@ -10,6 +10,8 @@
 
 .advice-bird {
   position: absolute;
-  right: 50px;
-  bottom: -220px;
+  right: 100px;
+  bottom: -200px;
+  width: 200px;
+  height: 200px;
 }
