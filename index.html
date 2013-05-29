@@ -57,7 +57,7 @@
         </section>
 
         <section>
-          <p>big olark logo</p>
+          <img src="/lib/images/big-logo.png" alt="" class="clean" />
         </section>
 
         <section>
@@ -83,6 +83,16 @@
 
         <section>
           <h1>PEBKAC</h1>
+        </section>
+
+        <section>
+          <h3>aka</h3>
+          <h1>ID10T</h1>
+        </section>
+
+        <section>
+          <h3>aka</h3>
+          <h1>User Error</h1>
         </section>
 
         <section>
@@ -163,12 +173,22 @@
         </section>
 
         <section>
-          <p>graph of disconnects</p>
-          <p>graph of current connections</p>
+          <h2>disconnects</h2>
+          <img src="/graph-0.svg" alt="" class="clean" />
         </section>
 
         <section>
-          <h3>10% of users disconnect <em class="fragment">every minute</em></h3>
+          <h2>total connections</h2>
+          <img src="/graph-1.svg" alt="" class="clean" />
+        </section>
+
+        <section>
+          <p><code>max(connections) ~= 350</code></p>
+          <p class="fragment"><code>max(disconnects) ~= 30</code></p>
+        </section>
+
+        <section>
+          <h3>nearly 10% of users disconnect <em class="fragment">every minute</em></h3>
         </section>
 
         <section>
@@ -177,14 +197,18 @@
         </section>
 
         <section>
+          <img src="/lib/images/rockstar.png" alt="" class="clean" />
+        </section>
+
+        <section>
           <h3>back <span class="fragment">to the logs!</span></h3>
         </section>
 
         <section>
           <h3>It's a UNIX system!  I know this!</h3>
-          <p style="margin-top: 5em"><code>cat default.log | grep "#op_disconnect" |
-            <br />json -g -a username | sort | 
-            <br />uniq -c | sort -b -n</code></p>
+          <p style="margin-top: 5em"><code><span class="fragment">cat default.log </span><span class="fragment">| grep "#op_disconnect" </span><span class="fragment">|
+            <br />json -g -a username </span><span class="fragment">| sort </span><span class="fragment">| 
+            <br />uniq -c </span><span class="fragment">| sort -b -n</code></span></p>
         </section>
         <section>
           <h3><code>$ npm install jsontool</code></h3>
@@ -201,7 +225,8 @@
         </section>
 
         <section>
-          <code>cat default.log|grep "#op_disconnect" | json -g -a timestamp username | grep "suzie" | cut -d' ' -f 1</code>
+          <h2>moar UNIX!</h2>
+          <code><span class="fragment">cat default.log</span><span class="fragment"> | grep "#op_disconnect" </span><span class="fragment">| json -g -a timestamp username </span><span class="fragment">| grep "suzie" </span><span class="fragment">| cut -d' ' -f 1</span></code>
           <pre class="fragment"><code contenteditable
           style="font-size: 36px;
           line-height: 1.25em">...
@@ -300,11 +325,16 @@
         </section>
 
         <section>
-          <p>wireshark screenshot</p>
+          <h2>Bringing out the big guns</h2>
+          <h1 class="fragment">Wireshark</h1>
         </section>
 
         <section>
           <p>closed by the <strong>client</strong></p>
+        </section>
+
+        <section>
+          <p>thanks, chrome</p>
         </section>
 
         <section>
@@ -331,11 +361,12 @@
         <!--</section>-->
 
         <section>
-          <ol>
+          <ol style="line-height:2em">
             <li>old websocket is swapped out for new on reconnect</li>
-            <li>old websocket's heartbeat is not properly cleaned up</li>
-            <li>old websocket's heartbeat calls disconnect</li>
-            <li>new websocket executes reconnect logic</li>
+            <li class="fragment">old websocket's heartbeat is not properly cleaned up</li>
+            <li class="fragment">old websocket's heartbeat calls disconnect</li>
+            <li class="fragment">new websocket executes reconnect logic</li>
+            <li class="fragment">goto 1</li>
           </ol>
           <p style="margin-top:1em" class="fragment">But who cares...</p>
         </section>
@@ -370,11 +401,17 @@
         <section>
           <h1>Lesson:</h1>
           <h2>Graph all the things!</h2>
+          <aside class="notes">
+            Use them for diagnonis and for ensuring the fix works
+          </aside>
         </section>
 
         <section>
           <h1>Lesson:</h1>
           <h2>Log all the things!</h2>
+          <aside class="notes">
+            It's hard to have too many
+          </aside>
         </section>
 
         <section>
