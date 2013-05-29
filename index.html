@@ -61,11 +61,12 @@
         </section>
 
         <section>
-          <img class="clean" src="/advice-bird.png" />
+          <h2>Olark Advice Bird</h2>
+          <img class="clean" src="/advice-bird.png" width="650" height="600" />
         </section>
 
         <section>
-          <img src="/opconsole.png" alt="" />
+          <img src="/opconsole.png" alt="" class="clean" />
         </section>
 
         <section>
@@ -82,6 +83,10 @@
           <blockquote>
             <strong>The chat client keeps disconnecting and reconnecting!</strong> - a customer
           </blockquote>
+        </section>
+
+        <section>
+          <h1>my codes are perfect</h1>
         </section>
 
         <section>
@@ -217,6 +222,7 @@
           line-height: 1.25em">  1 steve 
   2 john 
 512 suzie</code></pre>
+          <p>* names have been changed to protect the innocent</p>
         </section>
 
         <section>
@@ -367,7 +373,7 @@
           <ol style="line-height:2em">
             <li>old websocket is swapped out for new on reconnect</li>
             <li class="fragment">old websocket's heartbeat is not properly cleaned up</li>
-            <li class="fragment">old websocket's heartbeat calls disconnect</li>
+            <li class="fragment">old websocket's heartbeat calls disconnect after 60s</li>
             <li class="fragment">new websocket executes reconnect logic</li>
             <li class="fragment">goto 1</li>
           </ol>
@@ -393,7 +399,7 @@
         </section>
 
         <section>
-          <p>graph of #op_disconnect before/after deploy</p>
+          <img src="/graph-2.svg" alt="" />
         </section>
 
         <section>
