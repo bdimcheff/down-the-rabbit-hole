@@ -1,6 +1,7 @@
 .clean {
   border: none !important;
   box-shadow: none !important;
+  background: none !important;
 }
 
 .shadowed {
